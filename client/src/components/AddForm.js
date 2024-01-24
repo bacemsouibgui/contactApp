@@ -19,6 +19,7 @@ function AddForm() {
     }
   return (
     <div>
+      
        <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Name</Form.Label>

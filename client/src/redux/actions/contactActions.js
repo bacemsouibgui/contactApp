@@ -17,3 +17,20 @@ export const addContact =(newContact)=>(dispatch)=> {
     .catch((err)=>console.log(err))
 
 }
+
+// delete
+export const deleteContact =(idContact)=>(dispatch)=> {
+
+    axios.delete(`/api/contacts/delete/${idContact}`)
+    .then((res)=> dispatch(getContacts()))
+    .catch((err)=>console.log(err))
+
+}
+
+// edit
+export const editContact =(idContact, editeContact)=>(dispatch)=> {
+
+    axios.put(`/api/contacts/edit/${idContact}`, editeContact )
+    .then((res)=>dispatch(getContacts()))
+    .catch((err)=>console.log(err))
+}
